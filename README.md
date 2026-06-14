@@ -129,31 +129,33 @@ SCT_ML_02/
 
 ## 📸 Dashboard Screenshots
 
-### Main Dashboards
+### Main Dashboard
 
-![Homepage]("C:\Users\91821\Desktop\SCT_ML_02\images\Cluster_summary.png")
+![Homepage](images/Homepage.png)
 
 ### Elbow Method
 
-![Elbow Method]("C:\Users\91821\Desktop\SCT_ML_02\images\elbow_method.png")
+![Elbow Method](images/elbow_method.png)
 
 ### Customer Segmentation
 
-![Customer Segmentation]("C:\Users\91821\Desktop\SCT_ML_02\images\Customer_segmentation.png")
+![Customer Segmentation](images/Customer_segmentation.png)
 
 ### Live Predictor
 
-![Live Predictor]("C:\Users\91821\Desktop\SCT_ML_02\images\Live_predictor.png")
+![Live Predictor](images/Live_predictor.png)
 
-## Cluster summary
+## Cluster Summary
 
-![Cluster summary]("C:\Users\91821\Desktop\SCT_ML_02\images\Cluster_summary.png")
+![Cluster Summary](images/Cluster_summary.png)
 
-## Customer analytics 
-![Customer analytics]("C:\Users\91821\Desktop\SCT_ML_02\images\Customer_analytics.png")
+## Customer Analytics
 
-## Customer distribution
-![Customer distribution]("C:\Users\91821\Desktop\SCT_ML_02\images\Customer_distribution.png")
+![Customer Analytics](images/Customer_analytics.png)
+
+## Customer Distribution
+
+![Customer Distribution](images/Customer_distribution.png)
 
 ---
 
