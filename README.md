@@ -129,10 +129,6 @@ SCT_ML_02/
 
 ## 📸 Dashboard Screenshots
 
-### Main Dashboard
-
-![Homepage](images/Homepage.png)
-
 ### Elbow Method
 
 ![Elbow Method](images/elbow_method.png)
@@ -145,9 +141,6 @@ SCT_ML_02/
 
 ![Live Predictor](images/Live_predictor.png)
 
-## Cluster Summary
-
-![Cluster Summary](images/Cluster_summary.png)
 
 ## Customer Analytics
 
