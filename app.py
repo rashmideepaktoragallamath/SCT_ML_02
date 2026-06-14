@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from sklearn.cluster import KMeans
 
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
 # -----------------------------
 # PAGE CONFIGURATION
 # -----------------------------
@@ -172,6 +173,7 @@ The 'bend' in the curve indicates a suitable value of K.
 st.markdown("---")
 st.header("🧠 Customer Segmentation")
 
+
 # Features
 
 X = df[[
@@ -189,6 +191,21 @@ kmeans = KMeans(
 )
 
 df["Cluster"] = kmeans.fit_predict(X)
+
+score = silhouette_score(
+    X,
+    df["Cluster"]
+)
+
+score = silhouette_score(
+    X,
+    df["Cluster"]
+)
+
+st.metric(
+    "📊 Silhouette Score",
+    round(score, 3)
+)
 
 cluster_names = {
     0: "Regular Customers",
@@ -220,15 +237,29 @@ fig_cluster = px.scatter(
     title="Customer Segments"
 )
 
+fig_cluster.add_scatter(
+    x=kmeans.cluster_centers_[:, 0],
+    y=kmeans.cluster_centers_[:, 1],
+    mode="markers",
+    marker=dict(
+        size=18,
+        symbol="x"
+    ),
+    name="Cluster Centers"
+)
+
 st.plotly_chart(
     fig_cluster,
     use_container_width=True
+
 )
 st.write("### Customer Segment Distribution")
 
 segment_count = df["Customer Segment"].value_counts()
 
 st.bar_chart(segment_count)
+
+
 
 st.subheader("📋 Cluster Summary")
 
@@ -255,9 +286,35 @@ cluster_summary = cluster_summary[
 
 st.dataframe(
     cluster_summary.round(2)
-    
 
+    
 )
+# Download Segmented Dataset
+
+csv = df.to_csv(index=False)
+
+st.download_button(
+    label="📥 Download Segmented Dataset",
+    data=csv,
+    file_name="customer_segments.csv",
+    mime="text/csv"
+)
+st.subheader("📍 Cluster Centers")
+
+centers = pd.DataFrame(
+    kmeans.cluster_centers_,
+    columns=[
+        "Annual Income (k$)",
+        "Spending Score (1-100)"
+    ]
+)
+
+st.dataframe(
+    centers.round(2)
+)
+
+
+
 
 
 # -----------------------------
