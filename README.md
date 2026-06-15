@@ -2,6 +2,9 @@
 
 An interactive Machine Learning dashboard that segments retail customers using **K-Means Clustering** and provides actionable business insights for targeted marketing and customer retention strategies.
 
+🚀 Live Demo
+👉 (https://rashmideepaktoragallamath-sct-ml-02-app-onwrry.streamlit.app/)
+
 ---
 
 ## 📌 Project Overview
